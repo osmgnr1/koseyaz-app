@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.tooltip {
+    @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+    @apply visible z-50;
+}
+
+/* Address Alpine.js's Blip Issue */
+[x-cloak] {
+    display: none !important;
+}
+
+/* For summernote override unordered and order list */
+.note-editable ul {
+    list-style: disc !important;
+    list-style-position: inside !important;
+}
+
+.note-editable ol {
+    list-style: decimal !important;
+    list-style-position: inside !important;
+}
+
+.note-editable h1 {
+    font-size: 2em;
+}
+
+.note-editable h2 {
+    font-size: 1.5em;
+}
+
+.note-editable h3 {
+    font-size: 1.17em;
+}
+
+.note-editable h4 {
+    font-size: 1em;
+}
+
+
+
+a[aria-label="h1"] {
+    font-size: xx-large;
+}
+
+a[aria-label="h2"] {
+    font-size: x-large;
+}
+
+a[aria-label="h3"] {
+    font-size: larger;
+}
+
+a[aria-label="h4"] {
+    font-size: large;
+}
+
+a[aria-label="h5"] {
+    font-size: medium;
+}
+
+a[aria-label="h6"] {
+    font-size: small;
+}
+
+@media screen  and (max-width: 640px){
+
+    a[aria-label="h3"] {
+        font-size: large;
+    }
+    a[aria-label="h4"] {
+        display: none;
+    }
+    a[aria-label="h5"] {
+        display: none;
+    }
+    a[aria-label="h6"] {
+        display: none;
+    }
+
+}
+
+
+li[aria-label="blockquote"] {
+    border-left-color: lightskyblue;
+    border-left-style: solid;
+    border-left-width: 5px;
+}
+
+blockquote {
+    border-left-color: lightskyblue;
+    border-left-style: solid;
+    border-left-width: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+/* Hide Image Upload link in summernote */
+.note-group-image-url,
+.note-modal-footer {
+    display: none;
+  }
+
+
